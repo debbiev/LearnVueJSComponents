@@ -10,11 +10,9 @@
 <body>
 <div id="app">
 	<h1>{{ message }}</h1>
-</div>
-
-<div id="app2">
 	<comp1></comp1>
 </div>
+
 
 
 
@@ -26,19 +24,13 @@
 
 	var app = new Vue({
 		el: '#app',
+		components: { comp1 },
+		template: '<comp1/>',
 		data: {
 			message: 'Hello Vue!'
 		},
 	})
 
-	var app2 = new Vue({
-		el: '#app2',
-		components: { comp1 },
-		template: '<comp1/>',
-		data: {
-			message: 'Hello Component!'
-		},
-	})
 
 
 </script>
